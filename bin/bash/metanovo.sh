@@ -24,7 +24,7 @@ if [ ! -d "$mgf_folder" ]; then
 fi
 
 fasta_file=${FASTA_FILE}
-if [ ! -d "$fasta_file" ]; then
+if [ ! -f "$fasta_file" ]; then
       echo $fasta_file does not exist; exit 1
 fi
 
@@ -37,8 +37,9 @@ echo ${config_file}
 echo ${mgf_folder}
 echo ${fasta_file}
 echo ${output_folder}
+rm -rf ${output_folder}/temp
 mkdir ${output_folder}/temp
-export $TMPDIR=${output_folder}/temp
+export TMPDIR=${output_folder}/temp
 
 # set the TMPDIR to outputfolder...SQLITE crashes on ilifu..TO DO
 
@@ -69,7 +70,12 @@ fi
 
 
 input_fasta=$2
-source `which env_parallel.bash`
+set +e
+(env_parallel_script=`which env_parallel.bash`)
+set -e
+if [ ! -z $env_parallel_script ]; then
+    source $env_parallel_script
+fi
 
 if [ "$mn_filter_database" -eq "1" ] ; then
     if [ ! -d ${output_folder}/sg ] ; then
