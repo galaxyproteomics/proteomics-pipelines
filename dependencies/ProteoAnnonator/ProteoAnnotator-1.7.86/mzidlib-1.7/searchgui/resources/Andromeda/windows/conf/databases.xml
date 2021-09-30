@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <Rules>
+        <rules index="1" regex="(.*)" description="Everything including &gt;" />
+        <rules index="2" regex="&gt;(.*)" description="Everything after &gt;" />
+        <rules index="3" regex="&gt;([^ ]*)" description="Up to first space" />
+        <rules index="4" regex="&gt;IPI:([^\| .]*)" description="IPI accession" />
+        <rules index="5" regex="&gt;(gi\|[0-9]*)" description="NCBI accession" />
+        <rules index="6" regex="&gt;([^\t]*)" description="Up to first tab character" />
+        <rules index="7" regex="&gt;.*\|(.*)\|" description="Uniprot" />
+        <rules index="8" regex="&gt;([^\|]*)" description="up to first \ or |" />
+    </Rules>
+    <Databases>
+        <databases filename="ipi.HUMAN.v3.68.fasta" search_expression="&gt;IPI:([^\| .]*)" replacement_expression="%1" />
+        <databases filename="ipi.RAT.v3.68.fasta" search_expression="&gt;IPI:([^\| .]*)" replacement_expression="%1" />
+        <databases filename="ipi.CHICK.v3.62.fasta" search_expression="&gt;IPI:([^\| .]*)" replacement_expression="%1" />
+        <databases filename="ipi.BOVIN.v3.54.fasta" search_expression="&gt;IPI:([^\| .]*)" replacement_expression="%1" />
+        <databases filename="ipi.ARATH.v3.66.fasta" search_expression="&gt;IPI:([^\| .]*)" replacement_expression="%1" />
+        <databases filename="ipi.DANRE.v3.67.fasta" search_expression="&gt;IPI:([^\| .]*)" replacement_expression="%1" />
+        <databases filename="yeast_orf_trans_all_05-Jan-2010.fasta" search_expression="&gt;([^ ]*)" replacement_expression="%1" />
+        <databases filename="empty.fasta" search_expression="&gt;([^ ]*)" replacement_expression="%1" />
+        <databases filename="ups1_ups2_sequences.fasta" search_expression="&gt;([^\|]*)" replacement_expression="%1" />
+        <databases filename="ncbi.Ecoli_K12_substrDH10B.25-Jan-2010.fasta" search_expression="&gt;(gi\|[0-9]*)" replacement_expression="%1" />
+        <databases filename="dmel-all-translation-r5.24.fasta" search_expression="&gt;([^ ]*)" replacement_expression="%1" />
+        <databases filename="celegans.wormpep208.fasta" search_expression="&gt;([^\t]*)" replacement_expression="%1" />
+        <databases filename="bsa.fasta" search_expression="&gt;([^ ]*)" replacement_expression="%1" />
+        <databases filename="human histones.fasta" search_expression="&gt;IPI:([^\| .]*)" replacement_expression="%1" />
+        <databases filename="Homo_sapiens.GRCh37.57.pep.all.fa" search_expression="&gt;([^ ]*)" replacement_expression="%1" />
+        <databases filename="Homo_sapiens.GRCh37.57.pep.abinitio.fa" search_expression="&gt;([^ ]*)" replacement_expression="%1" />
+        <databases filename="human.first.search.fasta" search_expression="&gt;IPI:([^\| .]*)" replacement_expression="%1" />
+        <databases filename="xlaevisProt.fasta" search_expression="&gt;(gi\|[0-9]*)" replacement_expression="%1" />
+        <databases filename="xtropProt.fasta" search_expression="&gt;(gi\|[0-9]*)" replacement_expression="%1" />
+        <databases filename="mouse.first.search.fasta" search_expression="&gt;IPI:([^\| .]*)" replacement_expression="%1" />
+        <databases filename="ipi.CHICK.v3.65.fasta" search_expression="&gt;IPI:([^\| .]*)" replacement_expression="%1" />
+        <databases filename="bgal.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="ARATH.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="CANFA.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="HUMAN.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="BOVIN.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="PIG.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="CHICK.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="YEAST.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="RAT.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="MOUSE.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="DANRE.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="DROME.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="CAEEL.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="uniprot_sprot.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="uniprot_sprot_varsplic.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="uniprot_trembl.fasta" search_expression="&gt;.*\|(.*)\|" replacement_expression="%1" />
+        <databases filename="ups1_ups2_NEW.fasta" search_expression="&gt;([^\|]*)" replacement_expression="%1" />
+    </Databases>
+</configuration>

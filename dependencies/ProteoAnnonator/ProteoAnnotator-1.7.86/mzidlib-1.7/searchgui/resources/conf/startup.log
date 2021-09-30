@@ -1,0 +1,8 @@
+Memory settings read from the user preferences: 4096
+args: 
+original java.home: C:\Program Files\Java\jre1.8.0_60\bin\
+new java.home: C:\Program Files\Java\jre1.8.0_60\bin\
+
+Command line: 
+"C:\Program Files\Java\jre1.8.0_60\bin\java" -splash:resources\conf\searchgui-splash.png -Xms128M -Xmx4096M -cp "E:\github\mzidlib\searchgui\SearchGUI-1.26.7.jar" eu.isas.searchgui.gui.SearchGUI 
+Process exitValue: 0
